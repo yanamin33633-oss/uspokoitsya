@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3 техники как помочь себе успокоиться · ПуПуПу Box</title>
+<style>
+  :root{
+    --neon-yellow:#F5FF3D;
+    --hot-pink:#FF3D9A;
+    --electric-blue:#4DD8FF;
+    --mint:#7FFFC4;
+    --night:#0D0518;
+    --white:#FFFCF5;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{height:auto;}
+  body{
+    font-family:'Trebuchet MS','Segoe UI',system-ui,-apple-system,Arial,sans-serif;
+    background:var(--neon-yellow);
+    color:var(--night);
+    line-height:1.55;
+    padding:0 0 60px;
+  }
+  ::selection{background:var(--night);color:var(--neon-yellow);}
+  .head-font{font-family:'Arial Black','Segoe UI',Impact,system-ui,sans-serif;}
+  .wrap{max-width:760px;margin:0 auto;padding:0 22px;}
+
+  .cover{
+    background:var(--night);color:var(--neon-yellow);
+    padding:54px 22px 60px;border-bottom:6px solid var(--hot-pink);
+  }
+  .cover .inner{max-width:760px;margin:0 auto;}
+  .eyebrow{
+    font-weight:700;font-size:.72rem;letter-spacing:.18em;
+    text-transform:uppercase;opacity:.65;margin-bottom:18px;
+  }
+  .cover h1{
+    font-family:'Arial Black','Segoe UI',Impact,system-ui,sans-serif;
+    font-weight:900;font-size:clamp(2rem,7vw,3.2rem);line-height:1.04;letter-spacing:-.02em;
+    text-transform:uppercase;
+  }
+  .cover h1 .pink{color:var(--hot-pink);}
+  .cover h1 .blue{color:var(--electric-blue);}
+  .cover p{margin-top:20px;font-size:1.05rem;max-width:520px;color:rgba(255,252,245,.82);}
+  .badge{
+    display:inline-block;margin-top:26px;background:var(--neon-yellow);color:var(--night);
+    font-weight:800;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;
+    padding:9px 16px;border-radius:40px;
+  }
+
+  .intro{padding:40px 0 10px;}
+  .intro p{font-size:1.08rem;}
+  .intro .big{
+    font-family:'Arial Black','Segoe UI',Impact,system-ui,sans-serif;
+    font-weight:900;font-size:clamp(1.2rem,3.4vw,1.55rem);line-height:1.2;margin-bottom:14px;
+  }
+  .intro .big .pink{color:var(--hot-pink);}
+
+  .card{
+    background:var(--night);color:var(--white);
+    border-radius:28px;padding:34px 28px 30px;margin:24px 0;position:relative;overflow:hidden;
+  }
+  .card .num{
+    font-family:'Arial Black',Impact,sans-serif;font-weight:900;font-size:4.2rem;line-height:.8;
+    opacity:.16;position:absolute;top:14px;right:22px;
+  }
+  .card .tag{font-weight:700;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px;}
+  .card h2{
+    font-family:'Arial Black','Segoe UI',Impact,sans-serif;
+    font-weight:900;font-size:clamp(1.4rem,4.5vw,1.9rem);line-height:1.05;letter-spacing:-.01em;margin-bottom:6px;
+  }
+  .card .when{font-size:.92rem;opacity:.7;margin-bottom:18px;}
+  .steps{list-style:none;counter-reset:s;}
+  .steps li{
+    counter-increment:s;position:relative;padding:10px 0 10px 42px;
+    border-top:1px solid rgba(255,255,255,.12);font-size:1rem;
+  }
+  .steps li:first-child{border-top:none;}
+  .steps li::before{
+    content:counter(s);position:absolute;left:0;top:9px;width:28px;height:28px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.85rem;
+  }
+  .why{margin-top:18px;padding:14px 16px;border-radius:16px;font-size:.9rem;line-height:1.45;}
+  .why b{font-weight:700;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:4px;}
+
+  .c1 .tag,.c1 .num{color:var(--electric-blue);}
+  .c1 .steps li::before{background:var(--electric-blue);color:var(--night);}
+  .c1 .why{background:rgba(77,216,255,.12);}
+  .c2 .tag,.c2 .num{color:var(--hot-pink);}
+  .c2 .steps li::before{background:var(--hot-pink);color:var(--white);}
+  .c2 .why{background:rgba(255,61,154,.12);}
+  .c3 .tag,.c3 .num{color:var(--mint);}
+  .c3 .steps li::before{background:var(--mint);color:var(--night);}
+  .c3 .why{background:rgba(127,255,196,.12);}
+
+  .outro{background:var(--hot-pink);color:var(--white);border-radius:28px;padding:34px 28px;margin-top:34px;text-align:center;}
+  .outro h3{font-family:'Arial Black',Impact,sans-serif;font-weight:900;font-size:clamp(1.3rem,4vw,1.8rem);line-height:1.05;text-transform:uppercase;}
+  .outro p{margin-top:12px;font-size:1.02rem;opacity:.95;}
+  .sign{font-weight:800;margin-top:22px;font-size:.9rem;letter-spacing:.04em;}
+  footer{text-align:center;margin-top:30px;font-size:.78rem;opacity:.6;font-weight:700;letter-spacing:.1em;text-transform:uppercase;}
+
+  .pdfbtn{
+    position:fixed;right:18px;bottom:18px;z-index:99;background:var(--night);color:var(--neon-yellow);
+    border:none;cursor:pointer;font-weight:800;font-size:.8rem;letter-spacing:.04em;
+    padding:14px 20px;border-radius:40px;box-shadow:0 6px 20px rgba(0,0,0,.25);
+  }
+  .pdfbtn:hover{background:var(--hot-pink);color:var(--white);}
+
+  @media print{
+    @page{size:A4;margin:14mm;}
+    body{background:#fff;padding:0;}
+    .card,.outro,.cover{break-inside:avoid;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .cover{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .pdfbtn{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<button class="pdfbtn" onclick="window.print()">📄 Сохранить в PDF</button>
+
+<div class="cover">
+  <div class="inner">
+    <div class="eyebrow">— бонус к боксу · только для своих</div>
+    <h1>когда внутри <span class="pink">штормит</span><br>— жми сюда. <span class="blue">3 техники</span></h1>
+    <p>Перед сценой, экзаменом, важным сообщением или просто когда сердце колотится без причины. Сохрани в заметки — пригодится.</p>
+    <div class="badge">⚡ читается за 3 минуты</div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="intro">
+    <p class="big">тревога — это <span class="pink">не баг</span>, это просто разогнавшаяся нервная система.</p>
+    <p>Её нельзя «выключить силой воли», но можно мягко переключить тело в спокойный режим. Эти 3 техники работают за секунды и не палятся — можно делать хоть посреди толпы.</p>
+  </div>
+
+  <div class="card c1">
+    <div class="num">01</div>
+    <div class="tag">— дыхание</div>
+    <h2>Квадрат 4–4–4–4</h2>
+    <div class="when">когда: паника подкатывает, мысли разгоняются</div>
+    <ol class="steps">
+      <li>Вдох через нос — медленно считаешь до 4.</li>
+      <li>Задержка — снова до 4.</li>
+      <li>Выдох через рот — до 4.</li>
+      <li>Пауза перед новым вдохом — до 4. Повтори 4 круга.</li>
+    </ol>
+    <div class="why"><b>почему работает</b>Долгий ровный выдох включает «тормоз» нервной системы — пульс падает, тело понимает, что опасности нет.</div>
+  </div>
+
+  <div class="card c2">
+    <div class="num">02</div>
+    <div class="tag">— фокус здесь и сейчас</div>
+    <h2>5-4-3-2-1</h2>
+    <div class="when">когда: «уносит» в плохие мысли, сложно сосредоточиться</div>
+    <ol class="steps">
+      <li>Назови <b>5</b> вещей, которые видишь.</li>
+      <li><b>4</b> вещи, которые можешь потрогать.</li>
+      <li><b>3</b> звука, которые слышишь.</li>
+      <li><b>2</b> запаха рядом.</li>
+      <li><b>1</b> вкус во рту. Готово — ты снова тут.</li>
+    </ol>
+    <div class="why"><b>почему работает</b>Мозг не может одновременно паниковать о будущем и сканировать реальность. Органы чувств возвращают тебя в момент.</div>
+  </div>
+
+  <div class="card c3">
+    <div class="num">03</div>
+    <div class="tag">— сброс через тело</div>
+    <h2>Холод + сжатие</h2>
+    <div class="when">когда: трясёт, нужно успокоиться быстро</div>
+    <ol class="steps">
+      <li>Умой лицо холодной водой или приложи холодное к шее/запястьям.</li>
+      <li>Сильно сожми кулаки на 5 секунд — и резко расслабь.</li>
+      <li>Опусти плечи вниз, разожми челюсть.</li>
+      <li>Сделай один длинный выдох со звуком «хааа».</li>
+    </ol>
+    <div class="why"><b>почему работает</b>Холод запускает рефлекс замедления, а напряжение-расслабление сбрасывает мышечный зажим, в котором живёт стресс.</div>
+  </div>
+
+  <div class="outro">
+    <h3>ты справишься.<br>правда.</h3>
+    <p>Сохрани этот файл туда, где найдёшь его в нужный момент. Спокойствие — это навык, и ты только что прокачал(а) его на +3.</p>
+    <div class="sign">с любовью, ПуПуПу Box 💛</div>
+  </div>
+
+  <footer>ПуПуПу Box · капсула выпускного 2026</footer>
+</div>
+
+</body>
+</html>
